@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400italic" rel="stylesheet" type="text/css">
+</head>
+
+<body data-rsssl=1 class="bg-dark">
+    <div class="container-fluid">
+        <div class="container h-100 bg-secondary text-white p-5">
+            <h1>
+                <%= welcomeMessage %>
+            </h1>
+            <p>
+            </p>
+            <ul>
+                <% if(typeof(users) !=='undefined' ) { %>
+                    <% for(let i=0; i<users.length; i++) { %>
+                        <li>
+                            <%= users[i] %>
+                        </li>
+                        <% } %>
+                            <% } %>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
